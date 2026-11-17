@@ -54,6 +54,16 @@ function Resolve-MingwRoot([string]$Root) {
         return Split-Path $libgobject.DirectoryName -Parent
     }
 
+    foreach ($root in $searchRoots) {
+        Write-Host "ROOT: $root"
+        Get-ChildItem -Path $root -Directory -ErrorAction SilentlyContinue |
+            Select-Object -First 20 -ExpandProperty Name |
+            Write-Host
+        $samples = Get-ChildItem -Path $root -File -Recurse -ErrorAction SilentlyContinue |
+            Select-Object -First 20 -ExpandProperty FullName
+        Write-Host "FILES: $($samples -join '; ')"
+    }
+
     throw "Не найден каталог MSYS2 mingw64 с DLL. Проверенные пути: $($checked -join ', ')"
 }
 
