@@ -16,8 +16,10 @@ from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
+from html2doc import __version__
 from html2doc.errors import ArchiveValidationError
 from html2doc.options import ConvertOptions
+from html2doc.paths import resource_path
 from html2doc.pipeline import convert_batch
 
 MAX_ARCHIVE_BYTES = 100 * 1024 * 1024
@@ -25,10 +27,9 @@ MAX_MEMBERS = 500
 MAX_UNCOMPRESSED_BYTES = 200 * 1024 * 1024
 JOB_TTL_SECONDS = 3600
 
-app = FastAPI(title="html2doc", version="0.1.0")
-_PACKAGE_DIR = Path(__file__).parent
-_STATIC_DIR = _PACKAGE_DIR / "static"
-_TEMPLATES_DIR = _PACKAGE_DIR / "templates"
+app = FastAPI(title="html2doc", version=__version__)
+_STATIC_DIR = resource_path("web/static")
+_TEMPLATES_DIR = resource_path("web/templates")
 _TEMP_ROOT = Path(tempfile.gettempdir()) / "html2doc-jobs"
 _TEMP_ROOT.mkdir(parents=True, exist_ok=True)
 app.mount("/static", StaticFiles(directory=str(_STATIC_DIR)), name="static")

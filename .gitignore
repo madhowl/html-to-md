@@ -6,3 +6,10 @@ __pycache__/
 .mypy_cache/
 .ruff_cache/
 output/
+build/
+dist/
+*.AppDir/
+*.spec.bak
+*.appimage
+*.AppImage
+fonts.cache/

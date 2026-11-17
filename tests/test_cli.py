@@ -20,3 +20,17 @@ def test_cli_converts_single_file(tmp_path: Path) -> None:
     assert result.exit_code == 0, result.output
     assert (output / "лекция" / "лекция.md").is_file()
     assert (output / "лекция" / "conversion-report.json").is_file()
+
+
+def test_cli_version() -> None:
+    result = CliRunner().invoke(app, ["--version"])
+
+    assert result.exit_code == 0, result.output
+    assert result.output.strip() == "0.1.0"
+
+
+def test_cli_selftest() -> None:
+    result = CliRunner().invoke(app, ["selftest"])
+
+    assert result.exit_code == 0, result.output
+    assert "selftest: готово" in result.output
