@@ -14,23 +14,33 @@ function Resolve-MingwRoot([string]$Root) {
 
     $pacman = Get-Command pacman.exe -ErrorAction SilentlyContinue
     if ($pacman) {
-        $msysRoot = Split-Path (Split-Path $pacman.Source -Parent) -Parent
-        $candidates += (Join-Path $msysRoot "mingw64")
+        $pacmanDir = Split-Path $pacman.Source -Parent
+        $candidates += (Resolve-Path (Join-Path $pacmanDir "..\..")).Path
     }
 
     if ($env:SystemDrive) {
-        $candidates += (Join-Path $env:SystemDrive "msys64\mingw64")
+        $candidates += (Join-Path $env:SystemDrive "msys64")
     }
     if ($env:RUNNER_TEMP) {
-        $candidates += (Join-Path $env:RUNNER_TEMP "setup-msys2\msys64\mingw64")
+        $candidates += (Join-Path $env:RUNNER_TEMP "setup-msys2\msys64")
     }
 
+    $checked = @()
     foreach ($candidate in $candidates) {
-        if ((Test-Path $candidate) -and (Test-Path (Join-Path $candidate "bin"))) {
-            return $candidate
+        $mingwRoot = if ((Split-Path $candidate -Leaf) -eq "mingw64") { $candidate } else { Join-Path $candidate "mingw64" }
+        $binDir = Join-Path $mingwRoot "bin"
+        if (-not (Test-Path $binDir)) {
+            $checked += "$mingwRoot (нет bin)"
+            continue
         }
+
+        $dllCount = @(Get-ChildItem -Path $binDir -Filter "*.dll" -File).Count
+        if ($dllCount -gt 0) {
+            return $mingwRoot
+        }
+        $checked += "$mingwRoot (нет DLL)"
     }
-    throw "Не найден каталог MSYS2 mingw64. Проверенные пути: $($candidates -join ', ')"
+    throw "Не найден каталог MSYS2 mingw64 с DLL. Проверенные пути: $($checked -join ', ')"
 }
 
 $MingwRoot = Resolve-MingwRoot $MingwRoot
@@ -39,7 +49,11 @@ $nativeDir = Join-Path $Output "native"
 $fontDir = Join-Path $Output "fonts"
 $null = New-Item -ItemType Directory -Force -Path $nativeDir, $fontDir
 
-Get-ChildItem -Path $binDir -Filter "*.dll" -File | Copy-Item -Destination $nativeDir -Force
+$dlls = @(Get-ChildItem -Path $binDir -Filter "*.dll" -File)
+if ($dlls.Count -eq 0) {
+    throw "В каталоге $binDir нет DLL"
+}
+$dlls | Copy-Item -Destination $nativeDir -Force
 
 $fontSource = Join-Path $MingwRoot "share\fonts"
 if (Test-Path $fontSource) {

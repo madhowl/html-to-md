@@ -20,7 +20,7 @@ if ($LASTEXITCODE -ne 0) { throw "bundle_gtk_dlls.ps1 failed" }
 
 $Version = & uv --directory $Root run python -c "from html2doc import __version__; print(__version__)"
 if ($LASTEXITCODE -ne 0) { throw "version lookup failed" }
-$Version = $Version.Trim()
+$Version = ($Version | Select-Object -Last 1).Trim()
 
 $env:HTML2DOC_PAYLOAD_DIR = $Payload
 $env:HTML2DOC_ICON = Join-Path $Root "packaging\icons\icon.ico"
@@ -43,7 +43,7 @@ function Invoke-Build([bool]$OneFile, [string]$Name) {
 
 if ($Mode -in @("onefile", "both")) {
     $out = Invoke-Build $true "onefile"
-    $exe = Join-Path $out "html2doc\html2doc.exe"
+    $exe = Join-Path $out "html2doc.exe"
     $target = Join-Path $Dist "html2doc-$Version-windows-x86_64.exe"
     Copy-Item -Path $exe -Destination $target -Force
     & $target --version
