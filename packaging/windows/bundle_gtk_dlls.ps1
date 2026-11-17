@@ -40,6 +40,20 @@ function Resolve-MingwRoot([string]$Root) {
         }
         $checked += "$mingwRoot (нет DLL)"
     }
+    $searchRoots = @()
+    foreach ($candidate in $candidates) {
+        $root = if ((Split-Path $candidate -Leaf) -eq "mingw64") { Split-Path $candidate -Parent } else { $candidate }
+        if ((Test-Path $root) -and ($searchRoots -notcontains $root)) {
+            $searchRoots += $root
+        }
+    }
+
+    $libgobject = Get-ChildItem -Path $searchRoots -Filter "libgobject-2.0-0.dll" -File -Recurse -ErrorAction SilentlyContinue |
+        Select-Object -First 1
+    if ($libgobject) {
+        return Split-Path $libgobject.DirectoryName -Parent
+    }
+
     throw "Не найден каталог MSYS2 mingw64 с DLL. Проверенные пути: $($checked -join ', ')"
 }
 
