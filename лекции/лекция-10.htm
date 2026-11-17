@@ -1,0 +1,1133 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+        "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="ABBYY FineReader PDF 15">
+    <meta name="author" content="PDF2Go">
+    <meta name="description" content="Отсканированное изображение">
+    <title>Отсканированное изображение</title>
+    <style type="text/css">
+        table.main {
+        }
+
+        tr.row {
+        }
+
+        td.cell {
+        }
+
+        div.block {
+        }
+
+        div.paragraph {
+        }
+
+        .font0 {
+            font: 12pt Times New Roman, serif;
+        }
+
+        .font1 {
+            font: 14pt Times New Roman, serif;
+        }
+
+        .font2 {
+            font: 16pt Times New Roman, serif;
+        }
+
+        .font3 {
+            font: 18pt Times New Roman, serif;
+        }
+
+    </style>
+</head>
+<body><a name="caption1"></a>
+<h1><a name="bookmark0"></a><span class="font3" style="font-weight:bold;"><a name="bookmark1"></a>Связи регистров с подсистемами ЕГИСЗ, медицинскими и региональными информационными системами</span>
+</h1>
+<p><span class="font2">Регистры не существуют изолированно: их данные ежедневно запрашивают другие подсистемы единой системы, медицинская информационная система организации и региональная система. Понимание этих связей позволяет уполномоченному лицу предсказывать последствия каждой записи и правильно диагностировать ошибки, проявляющиеся «в другом месте» — при регистрации электронного документа, публикации расписания, передаче данных в региональную систему.</span>
+</p>
+<p><span class="font2" style="font-weight:bold;">Цель лекции — </span><span class="font2">описать информационные связи ФРМО и ФРМР с подсистемами единой системы, медицинскими и региональными информационными системами, интеграционные механизмы и типовые ситуации, в которых ошибки регистров проявляются в смежных системах.</span>
+</p>
+<p><span class="font2" style="font-weight:bold;">1. Схема связей</span></p>
+<table border="1">
+    <tr>
+        <td style="vertical-align:top;">
+            <p><span class="font1" style="font-weight:bold;">Система</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1" style="font-weight:bold;">Что получает из регистров</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1" style="font-weight:bold;">Что передаёт в регистры</span></p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Федеральный реестр НСИ</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Формирует справочник «Реестр медицинских организаций» из ФРМО</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Справочники для полей регистров</span></p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:top;">
+            <p><span class="font1">РЭМД</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Идентификаторы организации и подразделения, сведения о работнике для проверки документа</span>
+            </p></td>
+        <td style="vertical-align:top;"></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:top;">
+            <p><span class="font1">ИЭМК</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Организация, подразделение, лечащий врач</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">—</span></p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:top;">
+            <p><span class="font1">ФЭР</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Подразделения, режим работы, врачи и специальности</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">—</span></p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Специализированные регистры, ВИМИС</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Организации, врачи</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">—</span></p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Подсистема сбора показателей</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Ресурсы, кадры</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">—</span></p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Федеральный аккредитационный центр</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Сведения о специалисте, стаж</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Протоколы аккредитации</span></p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Портал НМО</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Специалист, специальность</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Образовательная активность</span></p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:top;">
+            <p><span class="font1">ФИС ФРДО</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">—</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Документы об образовании</span></p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">ФИС ГИА и приёма</span></p></td>
+        <td style="vertical-align:middle;">
+            <p><span class="font1">—</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Записи об обучающихся</span></p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Медицинская информационная система организации</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Структура, штат, работники (синхронизация)</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Сведения для регистров (при интеграционном ведении)</span></p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Региональная система (ГИС СЗ субъекта)</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Данные организаций региона</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Сведения организаций (при ведении через региональную систему)</span></p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Портал государственных услуг</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Организации и врачи для записи; выписки об аккредитации</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">—</span></p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Социальный фонд</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Проверка реестров выплат</span></p></td>
+        <td style="vertical-align:middle;">
+            <p><span class="font1">—</span></p></td>
+    </tr>
+</table>
+<img src="лекция-10_files/3b353a46384f-10-1.jpg" alt="" style="width:460pt;height:261pt;">
+<p><span class="font0" style="font-style:italic;">Рисунок 1. Информационные связи ФРМО и ФРМР</span></p>
+<ul style="list-style:none;">
+    <li>
+        <h2><a name="bookmark2"></a><span class="font2" style="font-weight:bold;"><a name="bookmark3"></a>2. Идентификаторы как основа связей</span><br><br><span
+                class="font2" style="font-weight:bold;"><a
+                name="bookmark4"></a>2.1. OID организации и подразделений</span></h2>
+        <p><span class="font2">Каждый структурированный электронный медицинский документ (СЭМД), передаваемый в РЭМД, содержит OID организации и подразделения из ФРМО, а также сведения о медицинском работнике, подписавшем документ. При регистрации документа РЭМД проверяет: организация существует и действует; подразделение принадлежит организации; работник имеет открытое занятие должности в организации на дату документа; должность и специальность соответствуют справочникам. Несоответствие — отказ в регистрации с кодом ошибки, указывающим на регистр.</span>
+        </p>
+        <ul style="list-style:none;">
+            <li>
+                <h2><a name="bookmark5"></a><span class="font2" style="font-weight:bold;"><a name="bookmark6"></a>2.2. Справочник организаций в ФНСИ</span>
+                </h2></li>
+        </ul>
+    </li>
+</ul>
+<p><span class="font2">Сведения ФРМО публикуются в справочнике федерального реестра нормативно-справочной информации, который используют все подсистемы и медицинские информационные системы страны. Изменение наименования или структуры в ФРМО через некоторое время отражается в справочнике; до этого другие системы «видят» прежние данные. Это объясняет задержки между исправлением в ФРМО и прекращением ошибок в смежных системах.</span>
+</p>
+<ul style="list-style:none;">
+    <li>
+        <h2><a name="bookmark7"></a><span class="font2" style="font-weight:bold;"><a name="bookmark8"></a>2.3. Идентификаторы работника</span>
+        </h2></li>
+</ul>
+<p><span class="font2">Запись работника имеет уникальный номер реестровой записи; в электронных документах и при интеграции работник идентифицируется по СНИЛС. Ошибка СНИЛС в регистре или в медицинской информационной системе приводит к несопоставлению врача — типичная причина отказов РЭМД.</span>
+</p>
+<ul style="list-style:none;">
+    <li>
+        <h2><a name="bookmark9"></a><span class="font2" style="font-weight:bold;"><a name="bookmark10"></a>3. Интеграционные механизмы</span><br><br><span
+                class="font2" style="font-weight:bold;"><a name="bookmark11"></a>3.1. Прямое ведение через веб-интерфейс</span>
+        </h2>
+        <p><span class="font2">Уполномоченное лицо вносит сведения в интерфейсе регистров; смежные системы получают их через сервисы единой системы. Для организации, ведущей регистры напрямую, важно обеспечить синхронизацию собственной медицинской информационной системы с регистрами: большинство систем поддерживает загрузку структуры и списка работников из ФРМО и ФРМР по сервисам единой системы, что исключает двойной ввод и расхождения.</span>
+        </p>
+        <ul style="list-style:none;">
+            <li>
+                <h2><a name="bookmark12"></a><span class="font2" style="font-weight:bold;"><a name="bookmark13"></a>3.2. Интеграционное ведение через медицинскую информационную систему</span>
+                </h2></li>
+        </ul>
+    </li>
+</ul>
+<p><span class="font2">Медицинская информационная система, подключённая к единой системе по интеграционным профилям (регламентам информационного взаимодействия, публикуемым оператором), передаёт сведения о структуре и работниках в регистры. Уполномоченное лицо ведёт данные в МИС, а передача выполняется автоматически. Особенности:</span>
+</p>
+<ul style="list-style:none;">
+    <li>
+        <p><span class="font2">• ответственность за сведения сохраняется за организацией;</span></p></li>
+    <li>
+        <p><span class="font2">• необходимо контролировать результат передачи (журнал интеграции, статусы записей): отклонённая передача означает, что сведения в регистре не обновлены, хотя в МИС внесены;</span>
+        </p></li>
+    <li>
+        <p><span
+                class="font2">• ошибки форматно-логического контроля возвращаются в МИС и требуют исправления в ней;</span>
+        </p>
+        <div>
+            <ul style="list-style:none;">
+                <li>
+                    <p><span class="font2">• при расхождении МИС и регистра источником истины для внешних потребителей является регистр.</span>
+                    </p></li>
+            </ul>
+            <ul style="list-style:none;">
+                <li>
+                    <h2><a name="bookmark14"></a><span class="font2" style="font-weight:bold;"><a name="bookmark15"></a>3.3. Ведение через региональную систему</span>
+                    </h2></li>
+            </ul>
+            <p><span class="font2">В ряде субъектов Российской Федерации сведения организаций в ФРМО и ФРМР передаются через государственную информационную систему субъекта: организация ведёт данные в региональной системе (или в МИС, интегрированной с ней), региональная система передаёт их в федеральные регистры. Региональный оператор в этом случае — участник процесса, и порядок взаимодействия устанавливается региональными актами. Уполномоченное лицо должно знать, где именно вносятся первичные сведения и как проверить их поступление в федеральный регистр.</span>
+            </p>
+            <ul style="list-style:none;">
+                <li>
+                    <h2><a name="bookmark16"></a><span class="font2" style="font-weight:bold;"><a name="bookmark17"></a>3.4. Защищённая сеть</span>
+                    </h2></li>
+            </ul>
+            <p><span class="font2">Интеграционное взаимодействие осуществляется по защищённой сети передачи данных с применением сертифицированных средств криптографической защиты; подключение организации выполняется по регламенту оператора при участии службы информационных технологий. Веб-доступ уполномоченных лиц защищённой сети не требует.</span>
+            </p>
+        </div>
+        <br clear="all">
+        <div>
+            <p><span class="font0" style="font-style:italic;">Рисунок 2. Три режима ведения регистров и контроль результата</span>
+            </p>
+        </div>
+        <br clear="all">
+        <div>
+            <p><span class="font2" style="font-weight:bold;">4. Типовые ситуации в смежных системах</span></p>
+            <table border="1">
+                <tr>
+                    <td style="vertical-align:bottom;">
+                        <p><span class="font1" style="font-weight:bold;">Проявление</span></p></td>
+                    <td style="vertical-align:bottom;">
+                        <p><span class="font1" style="font-weight:bold;">Причина в регистрах</span></p></td>
+                    <td style="vertical-align:bottom;">
+                        <p><span class="font1" style="font-weight:bold;">Действие</span></p></td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:bottom;">
+                        <p><span class="font1">РЭМД отклоняет документы всех врачей</span></p></td>
+                    <td style="vertical-align:bottom;">
+                        <p><span class="font1">Подразделение закрыто, переименовано с</span></p></td>
+                    <td style="vertical-align:bottom;">
+                        <p><span class="font1">Проверить подразделение в ФРМО;</span></p></td>
+                </tr>
+            </table>
+        </div>
+        <br clear="all">
+        <div><img src="лекция-10_files/3b353a46384f-10-2.jpg" alt="" style="width:450pt;height:266pt;">
+        </div>
+        <br clear="all">
+        <table border="1">
+            <tr>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">подразделения</span></p></td>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1">созданием нового OID, привязано к нелицензированному адресу</span></p></td>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">синхронизировать МИС</span></p></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">РЭМД отклоняет документы одного врача</span></p></td>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1">Занятие не открыто, закрыто ошибочно, СНИЛС не совпадает, должность не из справочника</span>
+                    </p></td>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">Проверить карточку в ФРМР; сверить СНИЛС в МИС</span></p></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">Расписание врача не публикуется в ФЭР</span></p></td>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1">Врач без занятия в подразделении; подразделение без условий «амбулаторно»; режим работы не заполнен</span>
+                    </p></td>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">Проверить ФРМР и ФРМО</span></p></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:bottom;">
+                    <p><span
+                            class="font1">Организация не отображается на портале государственных услуг для записи</span>
+                    </p></td>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1">Не заполнены признаки участия в ОМС, условия помощи, режим работы; расхождение справочника</span>
+                    </p></td>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">Проверить ФРМО;</span></p>
+                    <p><span class="font1">подождать обновления справочника</span></p></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">В МИС «пропал» врач или подразделение</span></p></td>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1">Синхронизация с регистром применила изменение (закрытие)</span></p></td>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">Проверить, было ли закрытие обоснованным</span></p></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1">Работник не видит в личном кабинете организацию</span></p></td>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">Занятие внесено в дубль или с ошибкой</span></p></td>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">Поиск по СНИЛС, проверка</span></p></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1">Региональная система показывает расхождение с федеральным регистром</span>
+                    </p></td>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">Передача не выполнена или отклонена</span></p></td>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1">Проверить журнал передачи; повторить; обращение</span></p></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1">Аккредитационный центр не находит стаж</span></p></td>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1">Занятия не внесены, разрыв</span></p></td>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">Внести историю занятий</span></p></td>
+            </tr>
+        </table>
+    </li>
+</ul>
+<ul style="list-style:none;">
+    <li>
+        <h2><a name="bookmark18"></a><span class="font2" style="font-weight:bold;"><a name="bookmark19"></a>5. Взаимодействие с разработчиком МИС</span>
+        </h2></li>
+</ul>
+<p><span class="font2">Служба информационных технологий и уполномоченные лица обеспечивают:</span></p>
+<ul style="list-style:none;">
+    <li>
+        <p><span class="font2">• настройку синхронизации МИС с регистрами (периодичность, направление);</span></p></li>
+    <li>
+        <p><span class="font2">• контроль журнала интеграции при интеграционном ведении;</span></p></li>
+    <li>
+        <p><span class="font2">• своевременное обновление справочников в МИС (номенклатуры должностей и специальностей, ФНСИ);</span>
+        </p></li>
+    <li>
+        <p><span class="font2">• передачу разработчику описаний ошибок с кодами, полученными от единой системы;</span>
+        </p></li>
+    <li>
+        <p><span class="font2">• тестирование после обновлений МИС и изменений интеграционных профилей.</span></p></li>
+</ul>
+<p><span class="font2">Регламент организации разграничивает: содержательные вопросы (что внести) — уполномоченные лица; технические (почему не передалось) — служба информационных технологий и разработчик.</span>
+</p>
+<ul style="list-style:none;">
+    <li>
+        <h2><a name="bookmark20"></a><span class="font2" style="font-weight:bold;"><a name="bookmark21"></a>6. Изменения интеграционных требований</span>
+        </h2></li>
+</ul>
+<p><span class="font2">Оператор публикует регламенты информационного взаимодействия и их версии на портале оперативного взаимодействия; при выпуске новой версии устанавливается переходный период. Организация с интеграционным ведением обязана обеспечить обновление МИС к сроку; при прямом ведении — учитывать изменения интерфейса. Куратор отслеживает публикации и включает их в план актуализации регламента.</span>
+</p>
+<h2><a name="bookmark22"></a><span class="font2" style="font-weight:bold;"><a name="bookmark23"></a>Заключение</span>
+</h2>
+<p><span class="font2">ФРМО и ФРМР связаны с подсистемами единой системы, медицинской информационной системой и региональной системой через идентификаторы (OID, СНИЛС) и справочники ФНСИ. Регистры могут вестись напрямую, через МИС или через региональную систему; во всех случаях организация отвечает за результат и обязана контролировать поступление сведений в федеральный регистр. Ошибки регистров проявляются в смежных системах — отказами РЭМД, отсутствием расписания, «пропавшими» врачами — и диагностируются по типовым ситуациям с проверкой соответствующего раздела регистра.</span>
+</p>
+<h2><a name="bookmark24"></a><span class="font2" style="font-weight:bold;"><a
+        name="bookmark25"></a>Список источников</span></h2>
+<ul style="list-style:none;">
+    <li>
+        <p><span class="font2">1. Постановление Правительства Российской Федерации от 09.02.2022 № 140 «О единой государственной информационной системе в сфере здравоохранения» (с последующими изменениями и дополнениями).</span>
+        </p></li>
+    <li>
+        <p><span class="font2">2. Приказ Минздрава России от 07.09.2020 № 947н «Об утверждении Порядка организации системы документооборота в сфере охраны здоровья в части ведения медицинской документации в форме электронных документов» (с последующими изменениями и дополнениями).</span>
+        </p></li>
+    <li>
+        <p><span class="font2">3. Приказ Минздрава России от 28.10.2022 № 708н, пункты 4, 21.</span></p></li>
+    <li>
+        <p><span class="font2">4. Регламенты информационного взаимодействия (интеграционные профили) подсистем ЕГИСЗ. — URL: portal.egisz.rosminzdrav.ru.</span>
+        </p></li>
+    <li>
+        <p><span class="font2">5. Федеральный реестр нормативно-справочной информации. — URL: nsi.rosminzdrav.ru.</span>
+        </p></li>
+    <li>
+        <p><span class="font2">6. Руководства пользователя ФРМО и ФРМР.</span></p></li>
+</ul>
+<h1><a name="bookmark26"></a><span class="font3" style="font-weight:bold;"><a name="bookmark27"></a>Выгрузки и аналитические отчёты — использование данных регистров в управлении организацией</span>
+</h1>
+<p><span class="font2">Регистры воспринимаются как обязанность, но для организации они — готовый источник управленческой информации: укомплектованность по подразделениям, коэффициент совместительства, возрастная структура, сроки аккредитации, оснащённость. Организация, которая использует собственные данные, получает двойную выгоду: принимает обоснованные кадровые решения и поддерживает качество данных, поскольку ошибки становятся заметны тем, кто на эти данные опирается.</span>
+</p>
+<p><span class="font2" style="font-weight:bold;">Цель лекции — </span><span class="font2">освоить состав выгрузок и отчётов регистров, методику расчёта управленческих показателей на их основе и правила обращения с выгрузками, содержащими персональные данные.</span>
+</p>
+<ul style="list-style:none;">
+    <li>
+        <h2><a name="bookmark28"></a><span class="font2" style="font-weight:bold;"><a name="bookmark29"></a>1. Выгрузки и отчёты в интерфейсе регистров</span><br><br><span
+                class="font2" style="font-weight:bold;"><a name="bookmark30"></a>1.1. Типовые отчёты ФРМО</span></h2>
+        <p><span class="font2">• штатное расписание по подразделениям: штатные, занятые, вакантные ставки, физические лица;</span>
+        </p></li>
+</ul>
+<ul style="list-style:none;">
+    <li>
+        <p><span class="font2">• перечень структурных подразделений с характеристиками;</span></p></li>
+    <li>
+        <p><span class="font2">• перечень зданий;</span></p></li>
+    <li>
+        <p><span class="font2">• коечный фонд по профилям и подразделениям;</span></p></li>
+    <li>
+        <p><span class="font2">• перечень оборудования по типам, подразделениям, состоянию;</span></p></li>
+    <li>
+        <p><span class="font2">• перечень транспорта;</span></p></li>
+    <li>
+        <p><span class="font2">• участки и прикреплённое население;</span></p></li>
+    <li>
+        <p><span class="font2">• сведения о лицензиях;</span></p></li>
+    <li>
+        <p><span class="font2">• отчётные таблицы для статистических форм (в частности, таблицы формы № 30 о штатах и кадрах), формируемые из регистров.</span>
+        </p></li>
+</ul>
+<ul style="list-style:none;">
+    <li>
+        <h2><a name="bookmark31"></a><span class="font2" style="font-weight:bold;"><a name="bookmark32"></a>1.2. Типовые отчёты ФРМР</span>
+        </h2></li>
+</ul>
+<ul style="list-style:none;">
+    <li>
+        <p><span class="font2">• список работников организации с должностями, подразделениями, ставками, типами занятости, датами;</span>
+        </p></li>
+    <li>
+        <p><span class="font2">• работники по категориям персонала и специальностям;</span></p></li>
+    <li>
+        <p><span class="font2">• работники с истекающими (истёкшими) сроками аккредитации;</span></p></li>
+    <li>
+        <p><span class="font2">• работники без сведений об образовании или аккредитации;</span></p></li>
+    <li>
+        <p><span class="font2">• работники в длительных отпусках;</span></p></li>
+    <li>
+        <p><span class="font2">• движение кадров за период (приняты, уволены, переведены);</span></p></li>
+    <li>
+        <p><span class="font2">• возрастная структура;</span></p></li>
+    <li>
+        <p><span class="font2">• квалификационные категории.</span></p></li>
+</ul>
+<p><span class="font2">Состав отчётов определяется действующей версией интерфейса; выгрузки формируются в табличных форматах для последующей обработки.</span>
+</p>
+<ul style="list-style:none;">
+    <li>
+        <h2><a name="bookmark33"></a><span class="font2" style="font-weight:bold;"><a name="bookmark34"></a>2. Управленческие показатели</span>
+        </h2></li>
+</ul>
+<p><span
+        class="font2">На основе выгрузок организация рассчитывает показатели, используемые в отчётности и планировании:</span>
+</p>
+<table border="1">
+    <tr>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1" style="font-weight:bold;">Показатель</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1" style="font-weight:bold;">Формула</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1" style="font-weight:bold;">Применение</span></p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:top;">
+            <p><span class="font1">У комплектованность должностей</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Занятые ставки / штатные ставки х 100 %</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">По организации, подразделениям, категориям, должностям</span></p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:top;">
+            <p><span class="font1">У комплектованность физическими лицами</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Физические лица (основное место) / штатные ставки х 100 %</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Оценка реальной обеспеченности</span></p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Коэффициент совместительства</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Занятые ставки / физические лица</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Нагрузка на работников; норма — стремление к 1,0-1,2</span></p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Доля вакантных ставок</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Вакантные / штатные х 100 %</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Приоритеты подбора</span></p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Обеспеченность населения врачами (средним персоналом)</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Физические лица / прикреплённое население х 10 000</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Сравнение с нормативами и регионом</span></p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Возрастная структура</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Доля работников по возрастным группам, доля старше пенсионного возраста</span></p>
+        </td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Прогноз выбытия, преемственность</span></p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Доля работников с истекающей аккредитацией в ближайшие 12 месяцев</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Такие работники / все работники х 100 %</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Планирование обучения</span></p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Доля работников с квалификационной категорией</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">С категорией / все х 100 %</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Показатели качества кадров</span></p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Текучесть</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Уволенные за год / среднесписочная численность х 100 %</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Оценка стабильности</span></p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Оснащённость по порядку оказания помощи</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Единицы оборудования в наличии / требуемые по стандарту оснащения х 100 %</span></p>
+        </td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Планирование закупок</span></p></td>
+    </tr>
+</table>
+<p><span class="font0" style="font-style:italic;">Рисунок 1. Управленческие показатели из данных регистров</span></p>
+<ul style="list-style:none;">
+    <li>
+        <h2><a name="bookmark35"></a><span class="font2" style="font-weight:bold;"><a name="bookmark36"></a>3. Аналитическая справка руководителю</span>
+        </h2></li>
+</ul>
+<p><span class="font2">Рекомендуемая структура ежеквартальной справки по кадрам и ресурсам на основе регистров:</span>
+</p>
+<ul style="list-style:none;">
+    <li>
+        <p><span class="font2">1.</span><span class="font2" style="font-weight:bold;"> Укомплектованность </span><span
+                class="font2">по подразделениям и категориям с динамикой к прошлому кварталу; подразделения с укомплектованностью ниже установленного порога.</span>
+        </p></li>
+    <li>
+        <p><span class="font2">2.</span><span class="font2" style="font-weight:bold;"> Совместительство </span><span
+                class="font2">— коэффициент по категориям; должности, по которым нагрузка превышает установленные пределы.</span>
+        </p></li>
+    <li>
+        <p><span class="font2">3.</span><span class="font2" style="font-weight:bold;"> Вакансии — </span><span
+                class="font2">перечень с длительностью незанятости; приоритетные для подбора.</span></p></li>
+    <li>
+        <p><span class="font2">4.</span><span class="font2" style="font-weight:bold;"> Аккредитация — </span><span
+                class="font2">работники со сроком до 12 месяцев; работники с истёкшей аккредитацией (недопустимо — требует немедленных мер).</span>
+        </p></li>
+    <li>
+        <p><span class="font2">5.</span><span class="font2" style="font-weight:bold;"> Возраст и выбытие — </span><span
+                class="font2">прогноз выхода на пенсию; должности риска.</span></p></li>
+    <li>
+        <p><span class="font2">6.</span><span class="font2" style="font-weight:bold;"> Оснащённость — </span><span
+                class="font2">оборудование со сроком службы, превышающим установленный; отсутствующие позиции по стандартам оснащения.</span>
+        </p></li>
+    <li>
+        <p><span class="font2">7.</span><span class="font2" style="font-weight:bold;"> Качество данных — </span><span
+                class="font2">показатели из лекции 9.1.</span></p></li>
+    <li>
+        <p><span class="font2">8.</span><span class="font2" style="font-weight:bold;"> Предложения — </span><span
+                class="font2">по подбору, обучению, изменению штатного расписания, закупкам.</span></p></li>
+</ul>
+<p><span class="font2">Справка готовится куратором совместно с кадровой службой и статистиком; данные — из выгрузок регистров на первое число квартала с указанием даты.</span>
+</p>
+<div><img src="лекция-10_files/3b353a46384f-10-3.jpg" alt="" style="width:441pt;height:269pt;">
+</div>
+<br clear="all">
+<ul style="list-style:none;">
+    <li>
+        <h2><a name="bookmark37"></a><span class="font2" style="font-weight:bold;"><a name="bookmark38"></a>4. Использование данных вне организации</span>
+        </h2></li>
+</ul>
+<p><span class="font2">Те же выгрузки используются:</span></p>
+<ul style="list-style:none;">
+    <li>
+        <p><span class="font2">• для подготовки статистической отчётности (форма № 30, отраслевые формы) — сверка и заполнение таблиц;</span>
+        </p></li>
+    <li>
+        <p><span class="font2">• для ответов на запросы органа управления здравоохранением (потребность в кадрах, заявки на целевое обучение, ординатуру);</span>
+        </p></li>
+    <li>
+        <p><span class="font2">• для обоснования заявок на оборудование по программам;</span></p></li>
+    <li>
+        <p><span class="font2">• для программ привлечения кадров («Земский доктор», региональные меры) — подтверждение вакансий;</span>
+        </p></li>
+    <li>
+        <p><span class="font2">• для подготовки к проверкам — демонстрация соответствия лицензионным требованиям по кадрам.</span>
+        </p></li>
+</ul>
+<p><span class="font2">Единый источник (регистры) исключает противоречия между документами, направляемыми в разные органы.</span>
+</p>
+<ul style="list-style:none;">
+    <li>
+        <h2><a name="bookmark39"></a><span class="font2" style="font-weight:bold;"><a name="bookmark40"></a>5. Региональные и федеральные аналитические сервисы</span>
+        </h2></li>
+</ul>
+<p><span class="font2">Региональные операторы и Минздрав России публикуют аналитические панели (мониторинги укомплектованности, оснащённости, качества данных) по данным регистров, доступные органам управления и, в ряде регионов, организациям. Позиция организации в таких мониторингах определяется её данными; уполномоченное лицо должно понимать, какие поля влияют на показатели (например, штатные ставки — на укомплектованность; условия помощи — на классификацию подразделений), и обеспечивать их корректность. Подсистема автоматизированного сбора показателей формирует из регистров часть федеральной отчётности без участия организации — ещё одна причина поддерживать данные в актуальном состоянии постоянно, а не «к отчётной дате».</span>
+</p>
+<ul style="list-style:none;">
+    <li>
+        <h2><a name="bookmark41"></a><span class="font2" style="font-weight:bold;"><a name="bookmark42"></a>6. Правила обращения с выгрузками</span>
+        </h2></li>
+</ul>
+<p><span class="font2">Выгрузки ФРМР содержат персональные данные. Регламент устанавливает:</span></p>
+<ul style="list-style:none;">
+    <li>
+        <p><span class="font2">1. Выгрузки формируются только уполномоченными лицами в объёме, необходимом для задачи; для аналитики, не требующей персональных данных, используются агрегированные отчёты.</span>
+        </p></li>
+    <li>
+        <p><span class="font2">2. Файлы хранятся в защищённых сетевых папках с доступом по перечню; не пересылаются по незащищённой почте; не копируются на съёмные носители без разрешения.</span>
+        </p></li>
+    <li>
+        <p><span class="font2">3. Передача выгрузок вне организации (органу управления, оператору) — по защищённым каналам, установленным получателем, с регистрацией.</span>
+        </p></li>
+    <li>
+        <p><span class="font2">4. Файлы уничтожаются после использования, если не подлежат хранению как приложения к актам сверок.</span>
+        </p></li>
+    <li>
+        <p><span class="font2">5. В справках руководителю персональные данные приводятся только при необходимости (например, перечень работников с истекающей аккредитацией — служебная информация ограниченного распространения).</span>
+        </p></li>
+</ul>
+<p><span class="font0" style="font-style:italic;">Рисунок 2. Цикл использования данных регистров в управлении</span></p>
+<ul style="list-style:none;">
+    <li>
+        <h2><a name="bookmark43"></a><span class="font2" style="font-weight:bold;"><a name="bookmark44"></a>7. Автоматизация</span>
+        </h2></li>
+</ul>
+<p><span class="font2">Организации с развитой информационной инфраструктурой настраивают регулярное получение данных из регистров через сервисы единой системы в собственную аналитическую систему или МИС с автоматическим расчётом показателей и формированием справок. При этом сохраняются требования к защите данных и к проверке соответствия автоматических расчётов методике (например, учёт совместителей, длительных отпусков).</span>
+</p>
+<h2><a name="bookmark45"></a><span class="font2" style="font-weight:bold;"><a name="bookmark46"></a>Заключение</span>
+</h2>
+<p><span class="font2">Регистры содержат готовые отчёты и выгрузки — штатное расписание с занятостью, списки работников, сроки аккредитации, ресурсы, — на основе которых организация рассчитывает укомплектованность, коэффициент совместительства, обеспеченность, возрастную структуру, оснащённость и качество данных. Ежеквартальная аналитическая справка руководителю переводит эти показатели в решения по подбору, обучению, штатному расписанию и закупкам, а единый источник обеспечивает согласованность отчётности для внешних органов. Выгрузки с персональными данными обрабатываются по правилам защиты, а федеральные и региональные мониторинги делают качество данных постоянной, а не отчётной задачей.</span>
+</p>
+<div><img src="лекция-10_files/3b353a46384f-10-4.jpg" alt="" style="width:431pt;height:269pt;">
+</div>
+<br clear="all">
+<h2><a name="bookmark47"></a><span class="font2" style="font-weight:bold;"><a
+        name="bookmark48"></a>Список источников</span></h2>
+<ul style="list-style:none;">
+    <li>
+        <p><span class="font2">1. Постановление Правительства Российской Федерации от 09.02.2022 № 140 (с последующими изменениями и дополнениями).</span>
+        </p></li>
+    <li>
+        <p><span class="font2">2. Приказ Росстата об утверждении формы № 30 «Сведения о медицинской организации» (действующая редакция).</span>
+        </p></li>
+    <li>
+        <p><span class="font2">3. Порядки оказания медицинской помощи по профилям (стандарты оснащения) — действующие приказы Минздрава России.</span>
+        </p></li>
+    <li>
+        <p><span class="font2">4. Федеральный закон от 27.07.2006 № 152-ФЗ «О персональных данных», статьи 5, 19.</span>
+        </p></li>
+    <li>
+        <p><span class="font2">5. Приказ Минздрава России от 15.05.2012 № 543н (нормативы обеспеченности первичного звена).</span>
+        </p></li>
+    <li>
+        <p><span class="font2">6. Руководства пользователя ФРМО и ФРМР. — URL: portal.egisz.rosminzdrav.ru.</span></p>
+    </li>
+</ul>
+<h1><a name="bookmark49"></a><span class="font3" style="font-weight:bold;"><a name="bookmark50"></a>Техническая поддержка — портал оперативного взаимодействия, обращения, руководства пользователя, региональный оператор</span>
+</h1>
+<p><span class="font2">Ни одно руководство пользователя не описывает все ситуации, а сама единая система развивается непрерывно. Умение правильно и быстро получить помощь — часть квалификации уполномоченного лица. Правильно оформленное обращение решается за дни; обращение без идентификаторов и описания — возвращается на уточнение и растягивается на недели, в течение которых организация формально нарушает сроки.</span>
+</p>
+<p><span class="font2" style="font-weight:bold;">Цель лекции — </span><span class="font2">освоить структуру поддержки участников единой системы, каналы и правила оформления обращений, порядок их регистрации и контроля в организации, а также источники самостоятельного поиска решений.</span>
+</p>
+<p><span class="font2" style="font-weight:bold;">1. Структура поддержки</span></p>
+<table border="1">
+    <tr>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1" style="font-weight:bold;">Уровень</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1" style="font-weight:bold;">Кто</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1" style="font-weight:bold;">Что решает</span></p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Внутренняя поддержка организации</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Куратор, служба информационных технологий</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Рабочее место, доступ, методические вопросы по регламенту</span></p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Региональный оператор</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Медицинский информационноаналитический центр (или уполномоченная организация), орган управления здравоохранением</span>
+            </p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Консультирование по ведению регистров, согласование изменений, региональные сверки, первичная диагностика, эскалация в федеральную поддержку</span>
+            </p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Федеральная техническая поддержка ЕГИСЗ</span></p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Служба технической поддержки оператора единой системы (на базе ФГБУ «ЦНИИОИЗ» Минздрава России)</span>
+            </p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Ошибки системы, объединение дублей, исправление ключевых полей, дополнение справочников, вопросы доступа и полномочий</span>
+            </p></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Смежные службы</span></p></td>
+        <td style="vertical-align:bottom;">
+            <p><span class="font1">Федеральный аккредитационный центр, портал НМО, техническая поддержка портала государственных услуг, удостоверяющие центры, разработчик МИС</span>
+            </p></td>
+        <td style="vertical-align:top;">
+            <p><span class="font1">Вопросы</span></p>
+            <p><span class="font1">соответствующих систем</span></p></td>
+    </tr>
+</table>
+<p><span class="font2">Принцип: обращение направляется на тот уровень, который может решить вопрос. Вопрос «как правильно внести перевод» — региональному оператору или по руководству; «система не сохраняет запись с ошибкой</span>
+</p>
+<p><span class="font2">кода ...» — в федеральную поддержку; «не подписывается заявка» — сначала служба информационных технологий и удостоверяющий центр.</span>
+</p>
+<p><span class="font0" style="font-style:italic;">Рисунок 1. Уровни поддержки и маршрутизация обращений</span></p>
+<ul style="list-style:none;">
+    <li>
+        <h2><a name="bookmark51"></a><span class="font2" style="font-weight:bold;"><a name="bookmark52"></a>2. Портал оперативного взаимодействия участников ЕГИСЗ</span>
+        </h2></li>
+</ul>
+<p><span class="font2">Портал (portal.egisz.rosminzdrav.ru) — официальный источник для участников:</span></p>
+<ul style="list-style:none;">
+    <li>
+        <p><span class="font2" style="font-weight:bold;">• руководства пользователя </span><span class="font2">всех подсистем (ФРМО, ФРМР, личный кабинет медицинского работника, личный кабинет участника) — актуальные версии с датами;</span>
+        </p></li>
+    <li>
+        <p><span class="font2" style="font-weight:bold;">• регламенты информационного взаимодействия </span><span
+                class="font2">и интеграционные профили;</span></p></li>
+    <li>
+        <p><span class="font2" style="font-weight:bold;">• новости </span><span class="font2">об обновлениях, плановых работах, изменениях порядка доступа;</span>
+        </p></li>
+    <li>
+        <p><span class="font2" style="font-weight:bold;">• обучающие материалы </span><span class="font2">и записи вебинаров;</span>
+        </p></li>
+    <li>
+        <p><span class="font2" style="font-weight:bold;">• типовые формы </span><span
+                class="font2">заявок и обращений;</span></p></li>
+    <li>
+        <p><span class="font2" style="font-weight:bold;">• ссылки </span><span class="font2">на портал технической поддержки и смежные сервисы.</span>
+        </p></li>
+</ul>
+<p><span class="font2">Куратор организации проверяет портал не реже одного раза в неделю; новые версии руководств сохраняются в папке регламента, изменения доводятся до уполномоченных лиц.</span>
+</p>
+<div><img src="лекция-10_files/3b353a46384f-10-5.jpg" alt="" style="width:445pt;height:273pt;">
+</div>
+<br clear="all">
+<ul style="list-style:none;">
+    <li>
+        <h2><a name="bookmark53"></a><span class="font2" style="font-weight:bold;"><a name="bookmark54"></a>3. Портал технической поддержки и каналы обращений</span><br><br><span
+                class="font2" style="font-weight:bold;"><a name="bookmark55"></a>3.1. Каналы</span></h2>
+        <p><span class="font2">Техническая поддержка принимает обращения через портал технической поддержки (регистрация обращения с получением номера, отслеживание статуса, база знаний с ответами на типовые вопросы), по электронной почте и по телефону горячей линии. Актуальные адреса и номера публикуются на портале оперативного взаимодействия; они изменялись (в частности, в 2020-х годах менялся номер горячей линии), поэтому организация использует контакты из действующих публикаций, а не из старых памяток. Регламент организации содержит перечень контактов с датой последней проверки.</span>
+        </p>
+        <ul style="list-style:none;">
+            <li>
+                <h2><a name="bookmark56"></a><span class="font2" style="font-weight:bold;"><a name="bookmark57"></a>3.2. Регистрация обращения</span>
+                </h2></li>
+        </ul>
+    </li>
+</ul>
+<p><span class="font2">Обращение через портал технической поддержки предпочтительно: оно получает номер, историю переписки и статус. При обращении по электронной почте номер присваивается ответным письмом. Телефон используется для консультаций и уточнения статуса; существенные вопросы дублируются письменно, поскольку организации требуется документальное подтверждение.</span>
+</p>
+<ul style="list-style:none;">
+    <li>
+        <h2><a name="bookmark58"></a><span class="font2" style="font-weight:bold;"><a name="bookmark59"></a>4. Оформление обращения</span><br><br><span
+                class="font2" style="font-weight:bold;"><a name="bookmark60"></a>4.1. Обязательные элементы</span></h2>
+        <p><span class="font2">1.</span><span class="font2"
+                                              style="font-weight:bold;"> Идентификация организации: </span><span
+                class="font2">полное наименование, ИНН, OID организации в ФРМО, субъект Российской Федерации.</span></p>
+    </li>
+</ul>
+<ul style="list-style:none;">
+    <li>
+        <p><span class="font2">2.</span><span class="font2"
+                                              style="font-weight:bold;"> Идентификация заявителя: </span><span
+                class="font2">фамилия, имя, отчество уполномоченного лица, должность, контактный телефон и электронная почта (те же, что в ЕСИА), СНИЛС — только если обращение касается доступа и это предусмотрено формой.</span>
+        </p></li>
+    <li>
+        <p><span class="font2">3.</span><span class="font2" style="font-weight:bold;"> Подсистема и раздел: </span><span
+                class="font2">ФРМО/ФРМР, раздел (например, «Штатное расписание», «Трудоустройство»).</span></p></li>
+    <li>
+        <p><span class="font2">4.</span><span class="font2" style="font-weight:bold;"> Объект: </span><span
+                class="font2">идентификатор записи (OID подразделения, номер реестровой записи работника, инвентарный номер оборудования) — без избыточных персональных данных; для работника — номер записи и, при необходимости, СНИЛС.</span>
+        </p></li>
+    <li>
+        <p><span class="font2">5.</span><span class="font2" style="font-weight:bold;"> Описание: </span><span
+                class="font2">что делали (пошагово), что ожидали, что получили (точный текст сообщения об ошибке, код), когда (дата, время), воспроизводится ли ошибка.</span>
+        </p></li>
+    <li>
+        <p><span class="font2">6.</span><span class="font2" style="font-weight:bold;"> Снимки экрана </span><span
+                class="font2">с видимыми адресом страницы и сообщением об ошибке; персональные данные третьих лиц на снимках закрываются.</span>
+        </p></li>
+    <li>
+        <p><span class="font2">7.</span><span class="font2" style="font-weight:bold;"> Приложения: </span><span
+                class="font2">подтверждающие документы (для объединения дублей — документы работника; для исправления реквизитов — выписка из ЕГРЮЛ; для лицензии — выписка из реестра лицензий).</span>
+        </p></li>
+    <li>
+        <p><span class="font2">8.</span><span class="font2" style="font-weight:bold;"> Ожидаемый результат: </span><span
+                class="font2">что должно быть сделано.</span></p></li>
+</ul>
+<ul style="list-style:none;">
+    <li>
+        <p><span class="font2" style="font-weight:bold;">4.2. Типовые категории обращений</span></p>
+        <table border="1">
+            <tr>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1" style="font-weight:bold;">Категория</span></p></td>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1" style="font-weight:bold;">Что приложить</span></p></td>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1" style="font-weight:bold;">Кто решает</span></p></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1">Ошибка при сохранении (код)</span></p></td>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">Снимок, описание шагов</span></p></td>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">Техподдержка</span></p></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:bottom;">
+                    <p><span
+                            class="font1">Отсутствие значения в справочнике (должность, оборудование, организация)</span>
+                    </p></td>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">Наименование, нормативное основание (номенклатура, РУ)</span></p></td>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">Техподдержка (ФНСИ)</span></p></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">Дубль записи работника</span></p></td>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1">Номера записей, документы работника</span></p></td>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">Техподдержка</span></p></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1">Отсутствие сведений об аккредитации</span></p></td>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1">Реквизиты протокола, выписка</span></p></td>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">Техподдержка / ФАЦ</span></p></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1">Исправление ключевых реквизитов организации</span></p></td>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">Выписка из ЕГРЮЛ</span></p></td>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">Техподдержка</span></p></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">Дубль организации</span></p></td>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">ИНН, оба OID</span></p></td>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1">Техподдержка, региональный оператор</span></p></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1">Полномочия пользователя (заявка отклонена, не активируются)</span></p></td>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">Номер заявки, СНИЛС</span></p></td>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">Техподдержка</span></p></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">Недоступность портала</span></p></td>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1">Время, снимок, результаты проверки сети</span></p></td>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1">Техподдержка (после проверки службой ИТ)</span></p></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1">Методический вопрос (как внести)</span></p></td>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">Описание ситуации</span></p></td>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1">Региональный оператор, руководство пользователя</span></p></td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;">
+                    <p><span class="font1">Ошибка интеграции МИС</span></p></td>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1">Код ошибки, журнал передачи</span></p></td>
+                <td style="vertical-align:bottom;">
+                    <p><span class="font1">Разработчик МИС, затем техподдержка</span></p></td>
+            </tr>
+        </table>
+    </li>
+    <li>
+        <h2><a name="bookmark61"></a><span class="font2" style="font-weight:bold;"><a name="bookmark62"></a>4.3. Чего избегать</span>
+        </h2></li>
+</ul>
+<ul style="list-style:none;">
+    <li>
+        <p><span
+                class="font2">• Несколько разных вопросов в одном обращении — каждое обращение по одному вопросу.</span>
+        </p></li>
+    <li>
+        <p><span class="font2">• Обращение без идентификаторов («у нас не работает ФРМР»),</span></p></li>
+    <li>
+        <p><span class="font2">• Пересылка полных персональных данных работников без необходимости.</span></p></li>
+    <li>
+        <p><span class="font2">• Повторные обращения по тому же вопросу с новыми номерами — уточнения направляются в рамках существующего обращения.</span>
+        </p></li>
+    <li>
+        <p><span class="font2">• Обращение в федеральную поддержку по вопросам, решаемым региональным оператором, и наоборот.</span>
+        </p></li>
+</ul>
+<p><span class="font2">Шаблон обращения включён в комплект курса (Шаблон 5).</span></p>
+<p><span class="font0" style="font-style:italic;">Рисунок 2. Структура обращения в техническую поддержку</span></p>
+<ul style="list-style:none;">
+    <li>
+        <h2><a name="bookmark63"></a><span class="font2" style="font-weight:bold;"><a name="bookmark64"></a>5. Учёт обращений в организации</span>
+        </h2></li>
+</ul>
+<p><span class="font2">Регламент устанавливает журнал обращений (может быть частью журнала внесения сведений): номер обращения, дата, канал, подсистема, суть, объект, ожидаемый срок, статус, дата и суть ответа, результат. Обращения, связанные с нормативными сроками внесения сведений, помечаются: они подтверждают добросовестность организации. Куратор еженедельно контролирует открытые обращения; при отсутствии ответа в разумный срок (ориентир — 5-10 рабочих дней в зависимости от категории) — уточняет статус по телефону, при необходимости — через регионального оператора.</span>
+</p>
+<ul style="list-style:none;">
+    <li>
+        <h2><a name="bookmark65"></a><span class="font2" style="font-weight:bold;"><a name="bookmark66"></a>6. Региональный оператор</span>
+        </h2></li>
+</ul>
+<p><span
+        class="font2">Региональный оператор — ближайший и, как правило, самый быстрый источник помощи. Организация:</span>
+</p>
+<ul style="list-style:none;">
+    <li>
+        <p><span class="font2">• знает контакты кураторов регионального оператора по ФРМО и ФРМР (в регламенте);</span>
+        </p></li>
+    <li>
+        <p><span class="font2">• участвует в вебинарах и рассылках оператора;</span></p></li>
+    <li>
+        <p><span class="font2">• согласует с оператором изменения, требующие подтверждения (тип организации, регистрация, закрытие подразделений с историей);</span>
+        </p></li>
+    <li>
+        <p><span class="font2">• направляет через оператора эскалацию по обращениям, не решённым федеральной поддержкой в срок;</span>
+        </p></li>
+    <li>
+        <p><span class="font2">• отвечает на запросы оператора в установленные сроки.</span></p>
+        <div><img src="лекция-10_files/3b353a46384f-10-6.jpg" alt="" style="width:442pt;height:268pt;">
+        </div>
+        <br clear="all"></li>
+</ul>
+<p><span class="font2">Порядок взаимодействия закрепляется региональными актами; куратор организации отслеживает их актуальность.</span>
+</p>
+<ul style="list-style:none;">
+    <li>
+        <h2><a name="bookmark67"></a><span class="font2" style="font-weight:bold;"><a name="bookmark68"></a>7. Самостоятельный поиск решения</span>
+        </h2></li>
+</ul>
+<p><span class="font2">До направления обращения уполномоченное лицо проверяет:</span></p>
+<ul style="list-style:none;">
+    <li>
+        <p><span
+                class="font2">1. Руководство пользователя актуальной версии — раздел по соответствующей операции.</span>
+        </p></li>
+    <li>
+        <p><span class="font2">2. Базу знаний портала технической поддержки — типовые ошибки и решения.</span></p></li>
+    <li>
+        <p><span
+                class="font2">3. Новости портала оперативного взаимодействия — плановые работы, известные проблемы.</span>
+        </p></li>
+    <li>
+        <p><span class="font2">4. Каталог ошибок курса (лекция 9.2) — не является ли ситуация следствием ошибки организации.</span>
+        </p></li>
+    <li>
+        <p><span class="font2">5. Рабочее место и полномочия (лекция 4.3) — дерево диагностики.</span></p></li>
+</ul>
+<p><span
+        class="font2">Обращение, направленное после этих проверок, содержит результаты проверок и решается быстрее.</span>
+</p>
+<ul style="list-style:none;">
+    <li>
+        <h2><a name="bookmark69"></a><span class="font2" style="font-weight:bold;"><a name="bookmark70"></a>8. Обучение и повышение квалификации уполномоченных лиц</span>
+        </h2></li>
+</ul>
+<p><span class="font2">Оператор и региональные центры проводят обучающие мероприятия при обновлениях регистров; участие уполномоченных лиц включается в план обучения организации. Материалы (презентации, записи) сохраняются куратором. Смена версии интерфейса — основание для внепланового инструктажа и, при необходимости, пересмотра регламента и памяток.</span>
+</p>
+<h2><a name="bookmark71"></a><span class="font2" style="font-weight:bold;"><a name="bookmark72"></a>Заключение</span>
+</h2>
+<p><span class="font2">Поддержка участников единой системы организована по уровням — организация, региональный оператор, федеральная техническая поддержка, смежные службы, — и обращение направляется на уровень, способный решить вопрос. Официальные источники — портал оперативного взаимодействия (руководства, регламенты, новости) и портал технической поддержки (обращения с номерами, база знаний). Обращение оформляется по шаблону с идентификаторами организации и объекта, описанием шагов, точным текстом ошибки, снимками экрана и документами; регистрируется в журнале организации и контролируется куратором. Контакты поддержки периодически изменяются и берутся из действующих публикаций.</span>
+</p>
+<h2><a name="bookmark73"></a><span class="font2" style="font-weight:bold;"><a
+        name="bookmark74"></a>Список источников</span></h2>
+<ul style="list-style:none;">
+    <li>
+        <p><span class="font2">1. Постановление Правительства Российской Федерации от 09.02.2022 № 140 (с последующими изменениями и дополнениями).</span>
+        </p></li>
+    <li>
+        <p><span class="font2">2. Портал оперативного взаимодействия участников ЕГИСЗ. — URL: portal.egisz.rosminzdrav.ru.</span>
+        </p></li>
+    <li>
+        <p><span class="font2">3. Портал технической поддержки ЕГИСЗ (регистрация обращений, база знаний). — URL: support.egisz.rosminzdrav.ru.</span>
+        </p></li>
+    <li>
+        <p><span class="font2">4. Федеральный закон от 27.07.2006 № 152-ФЗ «О персональных данных», статья 5 (минимизация данных при обращениях).</span>
+        </p></li>
+    <li>
+        <p><span class="font2">5. Руководства пользователя ФРМО, ФРМР, личного кабинета участника ЕГИСЗ, личного кабинета медицинского работника.</span>
+        </p></li>
+    <li>
+        <p><span class="font2">6. Шаблон 5 курса «Обращение в техническую поддержку».</span></p></li>
+</ul>
+<h1><a name="bookmark75"></a><span class="font3" style="font-weight:bold;"><a name="bookmark76"></a>Практикум 10. Формирование выгрузки, аналитической справки и обращения в техническую поддержку</span>
+</h1>
+<p><span class="font2">Заключительный практикум объединяет два навыка: превращение данных регистров в управленческую информацию и правильное оформление обращения в техническую поддержку. Обе части выполняются по пошаговым инструкциям; при отсутствии доступа используется учебная выгрузка из практикума 9.</span>
+</p>
+<p><span class="font2" style="font-weight:bold;">Цель практикума — </span><span class="font2">подготовить аналитическую справку по кадрам на основе выгрузки из регистров и оформить обращение в техническую поддержку по шаблону.</span>
+</p>
+<h2><a name="bookmark77"></a><span class="font2" style="font-weight:bold;"><a name="bookmark78"></a>Часть 1. Выгрузка и аналитическая справка</span><br><br><span
+        class="font2" style="font-weight:bold;"><a name="bookmark79"></a>Шаг 1. Сформируйте выгрузки</span></h2>
+<p><span class="font2">При наличии доступа: в ФРМО — штатное расписание по подразделениям (штатные, занятые ставки, физические лица); в ФРМР — список работников с должностями, подразделениями, ставками, типами занятости, датами приёма, датами рождения (или возрастными группами), сроками аккредитации. Сохраните файлы в защищённую папку, зафиксируйте дату выгрузки.</span>
+</p>
+<p><span class="font2">При отсутствии доступа: используйте учебные выгрузки практикума 9 (после исправления заложенных ошибок — то есть в «исправленном» состоянии: Р-02 — 1,0 + 0,5 совместительство; Р-03 и Р-14 — закрыты; Р-16 — внесена; штатных ставок по строке 2 — 9,0) и дополнительные учебные данные: даты рождения работников — Р-01 1961, Р-02 1988, Р-04 1959, Р-05 1994, Р-06 1975, Р-07 1990, Р-08 1968, Р-09 1957, Р-10 1997, Р-Н 1983, Р-12 1979, Р-13 1966, Р-15 1985, Р-16 2001; сроки аккредитации — Р-06 истёк 15.09.2026, Р-08 до 03.2027, Р-09 до 2030, Р-13 до 01.2027, остальные — более 12 месяцев.</span>
+</p>
+<h2><a name="bookmark80"></a><span class="font2" style="font-weight:bold;"><a name="bookmark81"></a>Шаг 2. Рассчитайте показатели</span>
+</h2>
+<p><span class="font2">По организации в целом и по подразделениям (терапевтическое, педиатрическое, лаборатория, филиал):</span>
+</p>
+<ul style="list-style:none;">
+    <li>
+        <p><span class="font2">1. Укомплектованность должностей (занятые / штатные).</span></p></li>
+    <li>
+        <p><span class="font2">2. Укомплектованность физическими лицами (лица с основным местом / штатные).</span></p>
+    </li>
+    <li>
+        <p><span class="font2">3. Коэффициент совместительства (занятые / физические лица).</span></p></li>
+    <li>
+        <p><span class="font2">4. Доля вакантных ставок.</span></p></li>
+    <li>
+        <p><span class="font2">5. Возрастная структура: до 35 лет; 35-49; 50-59; 60 и старше — число и доля; работники старше 60 — перечень должностей риска.</span>
+        </p></li>
+    <li>
+        <p><span class="font2">6. Работники с истекающей аккредитацией в ближайшие 12 месяцев и с истёкшей.</span></p>
+    </li>
+    <li>
+        <p><span class="font2">7. Показатели качества данных (лекция 9.1) — по результатам практикума 9: полнота охвата, «лишние» записи, своевременность.</span>
+        </p></li>
+</ul>
+<p><span class="font2">Оформите таблицей с указанием даты данных.</span></p>
+<p><span class="font2" style="font-weight:bold;">Шаг 3. Подготовьте аналитическую справку</span></p>
+<p><span class="font2">По структуре лекции 10.2 (8 разделов) на одну-две страницы. Обязательные выводы: подразделения с укомплектованностью ниже 80 %; должности, по которым коэффициент совместительства превышает 1,3; работник с истёкшей аккредитацией (Р-06) — незамедлительные меры (отстранение от работы до аккредитации в порядке трудового законодательства, доклад руководителю); прогноз выбытия по возрасту; предложения по подбору и обучению.</span>
+</p>
+<p><span class="font2" style="font-weight:bold;">Шаг 4. Проверьте соблюдение правил обращения с данными</span></p>
+<p><span class="font2">Убедитесь, что справка для руководителя содержит персональные данные только там, где это необходимо (перечень по аккредитации), а выгрузки сохранены в защищённой папке и не пересылались по незащищённым каналам. Опишите, где и как хранятся файлы.</span>
+</p>
+<h2><a name="bookmark82"></a><span class="font2" style="font-weight:bold;"><a name="bookmark83"></a>Часть 2. Обращение в техническую поддержку</span><br><br><span
+        class="font2" style="font-weight:bold;"><a name="bookmark84"></a>Шаг 5. Выберите ситуацию</span></h2>
+<p><span class="font2">Оформите обращение по одной из ситуаций (или по реальной ситуации организации):</span></p>
+<p><span class="font2" style="font-weight:bold;">Ситуация А. </span><span class="font2">При внесении занятия должности врача-невролога Р-07 система сообщает: «У работника уже существует основное место работы» — при этом обнаружена вторая запись (дубль) с иным СНИЛС, содержащая аккредитацию по неврологии без трудоустройства. Работник подтверждает, что СНИЛС в записи с аккредитацией верный, а в записи с трудоустройством — ошибочный (перепутаны две цифры).</span>
+</p>
+<p><span class="font2" style="font-weight:bold;">Ситуация Б. </span><span class="font2">В справочнике должностей ФРМО отсутствует должность, введённая номенклатурой № 434н и включённая в штатное расписание организации с 01.09.2026; внести штатную должность невозможно; приём работника на неё запланирован на 15.10.</span>
+</p>
+<p><span class="font2" style="font-weight:bold;">Ситуация В. </span><span class="font2">Заявка на предоставление полномочий оператора ФРМР работнику исполнена три рабочих дня назад, работник выполнил вход в личный кабинет участника, но в веб-интерфейсе ФРМР организация не отображается; рабочее место и учётная запись проверены по дереву диагностики.</span>
+</p>
+<h2><a name="bookmark85"></a><span class="font2" style="font-weight:bold;"><a name="bookmark86"></a>Шаг 6. Оформите обращение по Шаблону 5</span>
+</h2>
+<p><span class="font2">Заполните все обязательные элементы: идентификация организации (условные ИНН и OID), заявителя, подсистема и раздел, объект (номера записей, без избыточных персональных данных), пошаговое описание, точный текст ошибки, дата и время, воспроизводимость, перечень снимков экрана (опишите, что на них должно быть), приложения (какие документы), ожидаемый результат. Укажите канал направления и кому (федеральная поддержка / региональный оператор) с обоснованием.</span>
+</p>
+<p><span class="font2" style="font-weight:bold;">Шаг 7. Зарегистрируйте обращение</span></p>
+<p><span class="font2">Заполните строку журнала обращений: номер (условный), дата, канал, подсистема, суть, объект, ожидаемый срок ответа, связь с нормативным сроком внесения сведений (для ситуаций А и Б — да: приём работника), статус. Опишите, какие действия организация выполнит параллельно с ожиданием ответа (для А — вести основную запись; для Б — согласовать с региональным оператором временный порядок; для В — уточнить статус по телефону через пять рабочих дней).</span>
+</p>
+<h2><a name="bookmark87"></a><span class="font2" style="font-weight:bold;"><a name="bookmark88"></a>Требования к результату</span>
+</h2>
+<p><span class="font2">Практикум выполнен, если: рассчитаны показатели по организации и подразделениям с корректной методикой (совместители учтены по ставкам и по лицам раздельно); справка содержит обязательные выводы и предложения; описан порядок хранения выгрузок; обращение оформлено по шаблону со всеми элементами и корректно адресовано; строка журнала заполнена.</span>
+</p>
+<h2><a name="bookmark89"></a><span class="font2" style="font-weight:bold;"><a
+        name="bookmark90"></a>Список источников</span></h2>
+<ul style="list-style:none;">
+    <li>
+        <p><span class="font2">1. Лекции 10.1-10.3, 9.1 настоящего курса.</span></p></li>
+    <li>
+        <p><span class="font2">2. Шаблон 5 курса «Обращение в техническую поддержку»; Шаблон 3 «Журнал внесения и актуализации сведений» (раздел обращений).</span>
+        </p></li>
+    <li>
+        <p><span class="font2">3. Трудовой кодекс Российской Федерации, статья 76 (отстранение от работы).</span></p>
+    </li>
+    <li>
+        <p><span class="font2">4. Федеральный закон от 27.07.2006 № 152-ФЗ, статья 5.</span></p></li>
+    <li>
+        <p><span class="font2">5. Руководства пользователя ФРМО и ФРМР. — URL: portal.egisz.rosminzdrav.ru.</span></p>
+    </li>
+</ul>
+</body>
+</html>

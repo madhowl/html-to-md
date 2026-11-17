@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>html2doc — конвертер HTML</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main>
+    <h1>html2doc</h1>
+    <p class="lead">Загрузите ZIP с HTML/HTM-файлами и изображениями. Результат — ZIP с Markdown, PDF, DOCX и отчётами.</p>
+
+    <form id="upload-form">
+      <label for="archive">ZIP-архив с лекциями</label>
+      <input id="archive" name="file" type="file" accept=".zip,application/zip" required>
+      <button type="submit">Конвертировать</button>
+    </form>
+
+    <section id="status-panel" hidden>
+      <h2 id="status-text">Задание создано</h2>
+      <progress id="progress" value="0" max="1"></progress>
+      <p id="progress-label"></p>
+      <pre id="log"></pre>
+      <a id="download" href="#" hidden>Скачать результат ZIP</a>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
