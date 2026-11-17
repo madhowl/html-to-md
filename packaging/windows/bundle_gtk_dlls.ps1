@@ -56,12 +56,21 @@ function Resolve-MingwRoot([string]$Root) {
 
     foreach ($root in $searchRoots) {
         Write-Host "ROOT: $root"
-        Get-ChildItem -Path $root -Directory -ErrorAction SilentlyContinue |
-            Select-Object -First 20 -ExpandProperty Name |
-            Write-Host
-        $samples = Get-ChildItem -Path $root -File -Recurse -ErrorAction SilentlyContinue |
-            Select-Object -First 20 -ExpandProperty FullName
-        Write-Host "FILES: $($samples -join '; ')"
+        $bin = Join-Path $root "mingw64\bin"
+        Write-Host "BIN: $bin exists=$(Test-Path $bin)"
+        if (Test-Path $bin) {
+            Get-ChildItem -Path $bin -File -ErrorAction SilentlyContinue |
+                Select-Object -First 30 -ExpandProperty Name |
+                Write-Host
+        }
+        $pacmanExe = Join-Path $root "usr\bin\pacman.exe"
+        Write-Host "PACMAN: $pacmanExe exists=$(Test-Path $pacmanExe)"
+        if (Test-Path $pacmanExe) {
+            & $pacmanExe -Ql mingw-w64-x86_64-glib2 2>&1 |
+                Select-String "gobject" |
+                Select-Object -First 10 |
+                ForEach-Object { Write-Host $_ }
+        }
     }
 
     throw "Не найден каталог MSYS2 mingw64 с DLL. Проверенные пути: $($checked -join ', ')"
