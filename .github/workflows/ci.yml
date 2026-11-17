@@ -68,6 +68,7 @@ jobs:
           enable-cache: true
       - run: uv python install 3.12
       - uses: msys2/setup-msys2@v2
+        id: msys2
         with:
           msystem: MINGW64
           suppress-deprecation-warnings: msystem-mingw64
@@ -91,6 +92,8 @@ jobs:
             mingw-w64-x86_64-gcc-libs
             mingw-w64-x86_64-ttf-dejavu
       - run: pwsh packaging/windows/build_exe.ps1 -Mode both
+        env:
+          MSYS2_LOCATION: ${{ steps.msys2.outputs.msys2-location }}
       - uses: actions/upload-artifact@v4
         with:
           name: windows-exe

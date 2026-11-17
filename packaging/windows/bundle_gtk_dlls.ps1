@@ -11,6 +11,9 @@ function Resolve-MingwRoot([string]$Root) {
     if ($Root) {
         $candidates += $Root
     }
+    if ($env:MSYS2_LOCATION) {
+        $candidates += $env:MSYS2_LOCATION
+    }
 
     $pacman = Get-Command pacman.exe -ErrorAction SilentlyContinue
     if ($pacman) {
@@ -22,6 +25,7 @@ function Resolve-MingwRoot([string]$Root) {
         $candidates += (Join-Path $env:SystemDrive "msys64")
     }
     if ($env:RUNNER_TEMP) {
+        $candidates += (Join-Path $env:RUNNER_TEMP "msys64")
         $candidates += (Join-Path $env:RUNNER_TEMP "setup-msys2\msys64")
     }
 
@@ -52,25 +56,6 @@ function Resolve-MingwRoot([string]$Root) {
         Select-Object -First 1
     if ($libgobject) {
         return Split-Path $libgobject.DirectoryName -Parent
-    }
-
-    foreach ($root in $searchRoots) {
-        Write-Host "ROOT: $root"
-        $bin = Join-Path $root "mingw64\bin"
-        Write-Host "BIN: $bin exists=$(Test-Path $bin)"
-        if (Test-Path $bin) {
-            Get-ChildItem -Path $bin -File -ErrorAction SilentlyContinue |
-                Select-Object -First 30 -ExpandProperty Name |
-                Write-Host
-        }
-        $pacmanExe = Join-Path $root "usr\bin\pacman.exe"
-        Write-Host "PACMAN: $pacmanExe exists=$(Test-Path $pacmanExe)"
-        if (Test-Path $pacmanExe) {
-            & $pacmanExe -Ql mingw-w64-x86_64-glib2 2>&1 |
-                Select-String "gobject" |
-                Select-Object -First 10 |
-                ForEach-Object { Write-Host $_ }
-        }
     }
 
     throw "Не найден каталог MSYS2 mingw64 с DLL. Проверенные пути: $($checked -join ', ')"
