@@ -20,10 +20,13 @@ if ($LASTEXITCODE -ne 0) { throw "bundle_gtk_dlls.ps1 failed" }
 
 $Version = & uv --directory $Root run python -c "from html2doc import __version__; print(__version__)"
 if ($LASTEXITCODE -ne 0) { throw "version lookup failed" }
-$Version = $Version.Trim()
+$Version = ($Version | Select-Object -Last 1).Trim()
 
 $env:HTML2DOC_PAYLOAD_DIR = $Payload
 $env:HTML2DOC_ICON = Join-Path $Root "packaging\icons\icon.ico"
+$env:PATH = "$(Join-Path $Payload 'native');$env:PATH"
+$env:FONTCONFIG_FILE = Join-Path $Payload "fonts\fonts.conf"
+$env:FONTCONFIG_PATH = Join-Path $Payload "fonts"
 
 function Invoke-Build([bool]$OneFile, [string]$Name) {
     $work = Join-Path $Build "work-$Name"
@@ -33,14 +36,14 @@ function Invoke-Build([bool]$OneFile, [string]$Name) {
         --noconfirm `
         --distpath $out `
         --workpath $work `
-        --log-level WARN
+        --log-level WARN 2>&1 | Out-Host
     if ($LASTEXITCODE -ne 0) { throw "PyInstaller $Name failed" }
     return $out
 }
 
 if ($Mode -in @("onefile", "both")) {
     $out = Invoke-Build $true "onefile"
-    $exe = Join-Path $out "html2doc\html2doc.exe"
+    $exe = Join-Path $out "html2doc.exe"
     $target = Join-Path $Dist "html2doc-$Version-windows-x86_64.exe"
     Copy-Item -Path $exe -Destination $target -Force
     & $target --version

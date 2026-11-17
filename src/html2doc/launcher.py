@@ -2,11 +2,23 @@
 
 from __future__ import annotations
 
+import contextlib
 import ctypes
 import os
 import sys
 
 from html2doc.paths import bundle_dir, is_frozen
+
+
+def _configure_console_encoding() -> None:
+    if sys.platform != "win32":
+        return
+    for stream in (sys.stdout, sys.stderr):
+        reconfigure = getattr(stream, "reconfigure", None)
+        if reconfigure is None:
+            continue
+        with contextlib.suppress(OSError, ValueError):
+            reconfigure(encoding="utf-8", errors="replace")
 
 
 def _prepare_environment() -> None:
@@ -47,6 +59,7 @@ def _detach_console() -> None:
 
 
 def main() -> None:
+    _configure_console_encoding()
     _prepare_environment()
     args = sys.argv[1:]
 
