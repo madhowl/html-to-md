@@ -20,7 +20,7 @@ dependencies = [
 ]
 
 [project.scripts]
-html2doc = "html2doc.cli:app"
+html2doc = "html2doc.launcher:main"
 
 [build-system]
 requires = ["hatchling>=1.24"]
@@ -37,6 +37,7 @@ dev = [
     "types-beautifulsoup4>=4.12",
     "pypdf>=4.2",
     "httpx>=0.27",
+    "pyinstaller>=6.7",
 ]
 
 [tool.uv]

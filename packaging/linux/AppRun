@@ -1,0 +1,36 @@
+#!/bin/sh
+HERE=$(dirname "$(readlink -f "$0")")
+APP_LIB="$HERE/usr/lib/html2doc"
+INTERNAL="$APP_LIB/_internal"
+
+if [ -d "$INTERNAL/native" ]; then
+    LD_LIBRARY_PATH="$INTERNAL/native${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+fi
+if [ -d "$APP_LIB/native" ]; then
+    LD_LIBRARY_PATH="$APP_LIB/native${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+fi
+LD_LIBRARY_PATH="$INTERNAL${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+export LD_LIBRARY_PATH
+
+if [ -d "$INTERNAL/qt_plugins" ]; then
+    QT_PLUGIN_PATH="$INTERNAL/qt_plugins${QT_PLUGIN_PATH:+:$QT_PLUGIN_PATH}"
+    QT_QPA_PLATFORM_PLUGIN_PATH="$INTERNAL/qt_plugins/platforms"
+fi
+if [ -d "$INTERNAL/PySide6/plugins" ]; then
+    QT_PLUGIN_PATH="$INTERNAL/PySide6/plugins${QT_PLUGIN_PATH:+:$QT_PLUGIN_PATH}"
+    QT_QPA_PLATFORM_PLUGIN_PATH="$INTERNAL/PySide6/plugins/platforms"
+fi
+export QT_PLUGIN_PATH
+export QT_QPA_PLATFORM_PLUGIN_PATH
+
+if [ -f "$INTERNAL/fonts/fonts.conf" ]; then
+    FONTCONFIG_FILE="$INTERNAL/fonts/fonts.conf"
+    FONTCONFIG_PATH="$INTERNAL/fonts"
+elif [ -f "$APP_LIB/fonts/fonts.conf" ]; then
+    FONTCONFIG_FILE="$APP_LIB/fonts/fonts.conf"
+    FONTCONFIG_PATH="$APP_LIB/fonts"
+fi
+export FONTCONFIG_FILE
+export FONTCONFIG_PATH
+
+exec "$APP_LIB/html2doc" "$@"
