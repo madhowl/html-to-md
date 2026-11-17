@@ -44,7 +44,7 @@ jobs:
           sudo apt-get install -y \
             desktop-file-utils patchelf file \
             libpango-1.0-0 libpangocairo-1.0-0 libpangoft2-1.0-0 \
-            libharfbuzz0b libfreetype6 libfontconfig1 libcairo2 libcairo-gobject2 \
+            libharfbuzz0b libharfbuzz-subset0 libfreetype6 libfontconfig1 libcairo2 libcairo-gobject2 \
             libexpat1 libfribidi0 libgraphite2-3 libpng16-16 libffi8 \
             libpcre2-8-0 libxml2 librsvg2-2 \
             libxkbcommon-x11-0 libxcb-cursor0 libxcb-icccm4 libxcb-image0 \
