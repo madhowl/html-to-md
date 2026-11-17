@@ -8,7 +8,7 @@
 uv sync
 ```
 
-Требуется Python 3.12+. Для PDF через WeasyPrint нужны системные библиотеки Pango/Cairo/HarfBuzz; в целевой среде они присутствуют.
+Требуется Python 3.12+. Для PDF через WeasyPrint нужны системные библиотеки Pango/Cairo/HarfBuzz; portable-сборки содержат их в себе.
 
 ## Использование
 
@@ -66,4 +66,46 @@ output/<имя_файла>/
 uv run pytest
 uv run ruff check
 uv run mypy src
+uv run html2doc selftest
 ```
+
+## Portable-сборки
+
+Готовые артефакты сборятся в GitHub Actions и публикуются по тегу `vX.Y.Z`:
+
+- `html2doc-<версия>-x86_64.AppImage` — Linux;
+- `html2doc-<версия>-windows-x86_64.exe` — Windows onefile;
+- `html2doc-<версия>-windows-x86_64-portable.zip` — Windows onedir;
+- `SHA256SUMS` — контрольные суммы.
+
+Локальная сборка AppImage:
+
+```bash
+bash packaging/linux/build_appimage.sh
+```
+
+Локальная сборка Windows из PowerShell на Windows:
+
+```powershell
+pwsh packaging/windows/build_exe.ps1 -Mode both
+```
+
+Portable-бинарник без аргументов открывает GUI. CLI доступен через явные команды:
+
+```bash
+html2doc convert ./лекции --to md,pdf,docx --out ./output
+html2doc gui
+html2doc web --host 127.0.0.1 --port 8000
+html2doc selftest
+html2doc --version
+```
+
+## GitFlow
+
+- `main` — стабильные релизы, только через PR из `release/*` и `hotfix/*`.
+- `develop` — интеграционная ветка, только через PR из `feature/*`.
+- `feature/*` — новые возможности.
+- `release/*` — подготовка версии.
+- `hotfix/*` — срочные исправления с сразу двумя PR: в `main` и `develop`.
+- Коммиты — Conventional Commits (`feat:`, `fix:`, `docs:`, `ci:`, `chore:`, `refactor:`).
+- Релизы создаются тегом `vX.Y.Z` и публикуются workflow `Release`.

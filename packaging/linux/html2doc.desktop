@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=html2doc
+GenericName=HTML to Markdown, PDF and DOCX converter
+Comment=Конвертер HTML/HTM в Markdown, PDF и DOCX
+Exec=html2doc
+Icon=html2doc
+Terminal=false
+Categories=Office;
+StartupNotify=true
