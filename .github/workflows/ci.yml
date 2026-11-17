@@ -44,7 +44,7 @@ jobs:
           sudo apt-get install -y \
             desktop-file-utils patchelf file \
             libpango-1.0-0 libpangocairo-1.0-0 libpangoft2-1.0-0 \
-            libharfbuzz0b libharfbuzz-subset0 libfreetype6 libfontconfig1 libcairo2 libcairo-gobject2 \
+            libharfbuzz0b libfreetype6 libfontconfig1 libcairo2 libcairo-gobject2 \
             libexpat1 libfribidi0 libgraphite2-3 libpng16-16 libffi8 \
             libpcre2-8-0 libxml2 librsvg2-2 \
             libxkbcommon-x11-0 libxcb-cursor0 libxcb-icccm4 libxcb-image0 \
@@ -68,14 +68,15 @@ jobs:
           enable-cache: true
       - run: uv python install 3.12
       - uses: msys2/setup-msys2@v2
+        id: msys2
         with:
           msystem: MINGW64
+          suppress-deprecation-warnings: msystem-mingw64
           update: true
           install: >-
             mingw-w64-x86_64-gtk3
             mingw-w64-x86_64-pango
             mingw-w64-x86_64-cairo
-            mingw-w64-x86_64-cairo-gobject
             mingw-w64-x86_64-harfbuzz
             mingw-w64-x86_64-fontconfig
             mingw-w64-x86_64-freetype
@@ -91,6 +92,8 @@ jobs:
             mingw-w64-x86_64-gcc-libs
             mingw-w64-x86_64-ttf-dejavu
       - run: pwsh packaging/windows/build_exe.ps1 -Mode both
+        env:
+          MSYS2_LOCATION: ${{ steps.msys2.outputs.msys2-location }}
       - uses: actions/upload-artifact@v4
         with:
           name: windows-exe
