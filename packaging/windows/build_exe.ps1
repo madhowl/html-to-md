@@ -24,6 +24,9 @@ $Version = $Version.Trim()
 
 $env:HTML2DOC_PAYLOAD_DIR = $Payload
 $env:HTML2DOC_ICON = Join-Path $Root "packaging\icons\icon.ico"
+$env:PATH = "$(Join-Path $Payload 'native');$env:PATH"
+$env:FONTCONFIG_FILE = Join-Path $Payload "fonts\fonts.conf"
+$env:FONTCONFIG_PATH = Join-Path $Payload "fonts"
 
 function Invoke-Build([bool]$OneFile, [string]$Name) {
     $work = Join-Path $Build "work-$Name"
@@ -33,7 +36,7 @@ function Invoke-Build([bool]$OneFile, [string]$Name) {
         --noconfirm `
         --distpath $out `
         --workpath $work `
-        --log-level WARN
+        --log-level WARN 2>&1 | Out-Host
     if ($LASTEXITCODE -ne 0) { throw "PyInstaller $Name failed" }
     return $out
 }

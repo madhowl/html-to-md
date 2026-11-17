@@ -7,6 +7,8 @@
 ### Fixed
 
 - Удалены недоступные в Ubuntu 22.04 и MSYS2 пакеты из workflows.
+- Поиск MSYS2 в Windows-сборке и передача путей DLL/шрифтов в PyInstaller.
+- Возвращаемое значение `Invoke-Build` больше не затирается выводом PyInstaller.
 
 ## [0.1.1]
 
