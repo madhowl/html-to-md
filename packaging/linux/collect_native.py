@@ -89,8 +89,14 @@ def main() -> None:
     entries = ldconfig_entries()
     seen: set[Path] = set()
     for name in args.library:
-        path = resolve_library(name, entries)
+        try:
+            path = resolve_library(name, entries)
+        except RuntimeError as exc:
+            print(f"Пропущена необязательная библиотека: {exc}")
+            continue
         copy_library(path, output, seen, alias=path.name)
+    if not seen:
+        raise RuntimeError("Не удалось собрать ни одной нативной библиотеки")
     print(f"Скопировано библиотек: {len(seen)}")
 
 

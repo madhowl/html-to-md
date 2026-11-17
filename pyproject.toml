@@ -1,6 +1,6 @@
 [project]
 name = "html2doc"
-version = "0.1.0"
+version = "0.1.1"
 description = "Конвертер HTML/HTM в Markdown, PDF и DOCX с CLI, Qt6 GUI и Web UI"
 readme = "README.md"
 requires-python = ">=3.12"
